@@ -37,19 +37,22 @@ function playRound(playerSelection, computerSelection) {
 }
     
 function promptPlayer(){
-    let playerPrompt = ""
+    let playerPrompt = "",
+        isPromptValid;
+        isPromptValid = playerPrompt === 'rock' || playerPrompt === 'scissor' || playerPrompt === 'paper';
+        
+    do
+        {   
+            playerPrompt = prompt("Choose rock, paper or scissor")
+            isPromptValid = playerPrompt === 'rock' || playerPrompt === 'scissor' || playerPrompt === 'paper'
+            if (!isPromptValid){ alert('You have to enter a valid value chosen between paper, rock, scissor') } else {}
+            
+        } while (!isPromptValid);
     
-    playerPrompt = prompt("Choose rock, paper or scissor")
+    playerPrompt = playerPrompt.toLowerCase()
     
-    isPromptValid = playerPrompt === 'rock' || playerPrompt === 'scissor' || playerPrompt === 'paper';
-    
-    if (isPromptValid)
-        {
-        return playerPrompt
-        } else {
-        alert('You have to enter a valid value chosen between paper, rock, scissor')
-        promptPlayer()
-        }
+    return playerPrompt
+
         
 }    
     
@@ -61,6 +64,7 @@ function game()
         computerScore = 0,
         roundResult,
         playerPrompt;
+        
     
     for (let i=0; i < 5; i++){
         roundNumber = ++roundNumber
