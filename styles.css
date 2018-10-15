@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+html,body{
+   font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4{
+    font-family: 'Lato', sans-serif;
+    text-align:center;
+}
+
+.container2
+{
+    width : 100%;
+}
+.container1 button
+{
+    
+
+}
+.container2 button {
+    margin:8%;
+    width: 17%;
+    height: 10em;
+    font-family: 'Lato', sans-serif;
+    font-size:1.5em;
+    text-transform: uppercase;
+    border-radius: 2em;    
+}
+
+.container2 button:hover{
+    border: 0.2em solid black;  
+}
+
+.container2 button.rock:hover{
+    background-color:aqua;
+}
+
+.container2 button.paper:hover{
+    background-color:#66b748;
+}
+
+.container2 button.scissor:hover{
+    background-color:palevioletred;
+}
+
+#startGame{
+    background-color: crimson;
+    font-family: 'Lato', sans-serif;
+    font-size:1.5em;
+    text-transform: uppercase;
+    border-radius: 2em; 
+    margin:5% 30%;
+    width: 40%;
+    
+}
+
+button:active
+{
+    background-color:black !important;
+    color:white;
+}
+
+#display, #victoryDisplay{
+    width:100%;
+    font-size:2em;
+    text-align:center;
+}
+
+#computerChoice{
+    width:100%;
+    font-size:1em;
+    text-align:center;
+}
